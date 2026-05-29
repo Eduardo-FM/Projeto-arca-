@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Arca — Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <main class="login-container">
+
+            <!-- Painel esquerdo: identidade visual do sistema -->
+            <section class="login-left">
+                <span class="logo-emoji">♻️</span>
+                <h2>Projeto Arca</h2>
+                <p>Plataforma de gestão de<br>resíduos e reciclagem urbana.<br>Juntos por um futuro sustentável.</p>
+            </section>
+
+            <!-- Painel direito: formulário de login -->
+            <section class="login-right">
+                <h3>Acesse sua conta</h3>
+                <p class="login-subtitulo">Digite seu usuário e senha para continuar</p>
+
+                <form id="loginForm" onsubmit="validarLogin(event)">
+
+                    <div class="input-group">
+                        <label for="usuario">Usuário / CNPJ</label>
+                        <input type="text" id="usuario" placeholder="Digite seu acesso" required autocomplete="username">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="••••••••" required autocomplete="current-password">
+                    </div>
+
+                    <div class="links-senha">
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+
+                    <button type="submit" class="btn-confirmar">Entrar no sistema</button>
+                </form>
+
+                <div class="links-cadastro">
+                    <p>Não tem conta? <a href="#">Fale com a administração</a></p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- O script é carregado no final do body para garantir que o HTML já está pronto -->
+    <script src="script.js"></script>
+</body>
+</html>

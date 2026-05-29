@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefeitura — Ecopontos | Projeto Arca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR: perfil Prefeitura usa cor azul -->
+        <aside class="sidebar" style="background-color: var(--azul-acao);">
+            <div class="sidebar-header">
+                <h2>♻️ Arca</h2>
+                <span class="profile-badge" style="color: #7EB8FF; border-color: rgba(126,184,255,0.3);">Prefeitura</span>
+            </div>
+
+            <nav class="menu-nav">
+                <a href="prefeitura_apresentacao.html">📊 Dashboard Municipal</a>
+                <a href="prefeitura_ecopontos.html" class="active" style="background-color: rgba(126,184,255,0.20); color: #7EB8FF;">📍 Gerenciar Ecopontos</a>
+                <a href="prefeitura_relatorios.html">📋 Relatórios da Cidade</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html">← Sair do sistema</a>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <header class="main-header">
+                <div>
+                    <h1 style="color: var(--azul-acao);">Gerenciar Ecopontos</h1>
+                    <p>Cadastre, edite e remova pontos de coleta da cidade</p>
+                </div>
+            </header>
+
+            <!-- Formulário CRUD -->
+            <section class="content-section">
+                <h2 style="color: var(--azul-acao);">📝 Cadastrar / Editar Ecoponto</h2>
+
+                <form id="formCrudEcoponto">
+                    <!-- Campo oculto que guarda o ID quando estamos editando -->
+                    <input type="hidden" id="ecopontoId">
+
+                    <div class="form-group">
+                        <label for="nomePonto">Nome do Ponto de Coleta</label>
+                        <input type="text" id="nomePonto" placeholder="Ex: Ecoponto Central — Bairro Jardim" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enderecoPonto">Endereço Completo</label>
+                        <input type="text" id="enderecoPonto" placeholder="Ex: Rua das Flores, 123 — Jardim Paulista" required>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="capacidade">Capacidade Máxima (toneladas)</label>
+                            <input type="number" id="capacidade" placeholder="Ex: 50" min="1" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="status">Status Operacional</label>
+                            <select id="status" required>
+                                <option value="ativo">✅ Ativo</option>
+                                <option value="manutencao">⚙️ Em Manutenção</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                        <button type="submit" class="btn-confirmar" style="background-color: var(--azul-acao);">
+                            💾 Salvar Ecoponto
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Tabela de listagem -->
+            <section class="content-section">
+                <h2 style="color: var(--azul-acao);">📋 Ecopontos Cadastrados</h2>
+
+                <div style="overflow-x: auto;">
+                    <table class="tabela-estilizada" id="tabelaEcopontos">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Endereço</th>
+                                <th>Capacidade</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Preenchido dinamicamente pelo crud_ecopontos.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- O script cuida de todo o CRUD da tabela -->
+    <script src="crud_ecopontos.js"></script>
+</body>
+</html>
