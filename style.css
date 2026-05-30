@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-   
+    
     --verde-primario:   #1A6B3C;   
     --verde-medio:      #2D9B5A;   
     --verde-claro:      #D6F0E3;   
     --verde-acento:     #00E87A;   
 
-    --fundo-pagina:     #F4F9F6;  
+    
+    --fundo-pagina:     #F4F9F6;   
     --fundo-card:       #FFFFFF;   
     --borda-sutil:      #D1E8DA;   
     --texto-principal:  #0D1F17;   
-    --texto-secundario: #5A7A68;  
+    --texto-secundario: #5A7A68;   
     --texto-branco:     #FFFFFF;
 
+    
     --azul-acao:        #1A3B8C;   
     --vermelho-erro:    #E53935;   
     --amarelo-aviso:    #F9A825;   
 }
 
-
- 
 *, *::before, *::after {
-   
+    
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -37,27 +37,23 @@ body {
     -webkit-font-smoothing: antialiased; 
 }
 
-
-/
-
-
 .login-wrapper {
-    display: flex;                 
+    display: flex;                  
     justify-content: center;        
     align-items: center;            
     min-height: 100vh;              
     padding: 20px;
     background-color: var(--verde-claro);
     
+    
     background-image: 
         radial-gradient(circle at 20% 30%, rgba(0,232,122,0.12) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(26,107,60,0.10) 0%, transparent 50%);
 }
 
-
 .login-container {
     display: flex;
-    flex-direction: row;          
+    flex-direction: row;            
     background-color: var(--fundo-card);
     border-radius: 24px;
     width: 100%;
@@ -66,7 +62,8 @@ body {
     box-shadow: 
         0 20px 60px rgba(26,107,60, 0.15),
         0 2px 8px rgba(0,0,0,0.08);
-    overflow: hidden;              
+    overflow: hidden;               
+}
 
 .login-left {
     flex: 1;                        
@@ -166,6 +163,7 @@ body {
     font-size: 14px;
     background-color: var(--fundo-pagina);
     color: var(--texto-principal);
+    
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -201,7 +199,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.04em;
-    cursor: pointer;               
+    cursor: pointer;                
     font-family: 'DM Sans', sans-serif;
     transition: background-color 0.25s ease, transform 0.1s ease;
     margin-top: 6px;
@@ -229,19 +227,16 @@ body {
     text-decoration: none;
 }
 
-
-
-
 .dashboard-container {
     display: flex;
-    width: 100vw;   
-    height: 100vh;  
+    width: 100vw;    
+    height: 100vh;   
     overflow: hidden;
 }
 
 .sidebar {
     width: 250px;
-    min-width: 250px;             
+    min-width: 250px;               
     background-color: var(--verde-primario);
     color: var(--texto-branco);
     display: flex;
@@ -330,7 +325,7 @@ body {
 }
 
 .main-content {
-    flex-grow: 1;      
+    flex-grow: 1;       
     padding: 36px 40px;
     overflow-y: auto;   
     background-color: var(--fundo-pagina);
@@ -357,8 +352,6 @@ body {
     margin-top: 4px;
 }
 
-
-
 .metrics-grid {
     display: flex;
     gap: 20px;
@@ -371,7 +364,7 @@ body {
     border: 1.5px solid var(--borda-sutil);
     border-radius: 16px;
     padding: 22px;
-    flex: 1;           
+    flex: 1;            
     min-width: 180px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     position: relative;
@@ -403,7 +396,6 @@ body {
     font-weight: 700;
     color: var(--verde-primario);
 }
-
 
 .content-section {
     background-color: var(--fundo-card);
@@ -539,10 +531,9 @@ body {
     color: #8a5c00;
 }
 
-
-
 @media (max-width: 768px) {
 
+    
     .login-container {
         flex-direction: column;
     }
@@ -556,6 +547,7 @@ body {
         padding: 30px 24px;
     }
 
+    
     .dashboard-container {
         flex-direction: column;
     }
@@ -577,6 +569,7 @@ body {
         padding: 20px;
     }
 
+    
     .card-metric {
         min-width: 45%;
     }
