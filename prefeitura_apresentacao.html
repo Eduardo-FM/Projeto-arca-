@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel da Prefeitura - Reciclagem</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --azul-primario: #1A3B8C;
+            --azul-secundario: rgba(255,255,255,0.15);
+        }
+    </style>
 </head>
 <body>
     <div class="dashboard-container">
@@ -14,7 +20,7 @@
                 <span class="profile-badge" style="background-color: var(--azul-secundario);">Perfil: Prefeitura</span>
             </div>
             <nav class="menu-nav">
-                <a href="prefeitura_apresentacao.html" class="active" style="background-color: var(--azul-secundario);">Dashboard Municipal</a>
+                <a href="prefeitura_apresentacao.html" class="active" style="background-color: rgba(26,59,140,0.5);">Dashboard Municipal</a>
                 <a href="prefeitura_ecopontos.html">Gerenciar Ecopontos</a>
                 <a href="prefeitura_relatorios.html">Relatórios da Cidade</a>
             </nav>
@@ -32,15 +38,15 @@
             <section class="metrics-grid">
                 <div class="card-metric" style="border-color: var(--azul-primario);">
                     <h3 style="color: var(--azul-primario);">Total Reciclado (Cidade)</h3>
-                    <p style="color: var(--texto-escuro);">12.450 Ton</p>
+                    <p style="color: var(--texto-principal);">12.450 Ton</p>
                 </div>
                 <div class="card-metric" style="border-color: var(--azul-primario);">
                     <h3 style="color: var(--azul-primario);">Ecopontos Ativos</h3>
-                    <p style="color: var(--texto-escuro);">28</p>
+                    <p style="color: var(--texto-principal);">28</p>
                 </div>
                 <div class="card-metric" style="border-color: var(--azul-primario);">
                     <h3 style="color: var(--azul-primario);">Economia Gerada</h3>
-                    <p style="color: var(--texto-escuro);">R$ 45.000</p>
+                    <p style="color: var(--texto-principal);">R$ 45.000</p>
                 </div>
             </section>
         </main>

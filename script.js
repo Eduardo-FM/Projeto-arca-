@@ -21,5 +21,3 @@ function validarLogin(event) {
         alert('❌ Usuário ou senha inválidos!\nVerifique suas credenciais e tente novamente.');
     }
 }
-
-
