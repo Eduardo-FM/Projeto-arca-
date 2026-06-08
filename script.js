@@ -5,16 +5,16 @@ function validarLogin(event) {
     const senha   = document.getElementById('senha').value.trim();
     if (usuario === 'tutor' && senha === '123456') {
     
-        window.location.href = 'tutor_apresentacao.html';
+        window.location.href = 'paginas/tutor/tutor_apresentacao.html';
 
     } else if (usuario === 'candidato' && senha === 'cand!098') {
-        window.location.href = 'candidato_apresentacao.html';
+        window.location.href = 'paginas/candidato/candidato_apresentacao.html';
 
     } else if (usuario === 'Ong' && senha === 'ong$-135') {
-        window.location.href = 'ong_apresentacao.html';
+        window.location.href = 'paginas/ong/ong_apresentacao.html';
 
     } else if (usuario === 'prefeitura' && senha === 'pref@456') {
-        window.location.href = 'prefeitura_apresentacao.html';
+        window.location.href = 'paginas/prefeitura/prefeitura_apresentacao.html';
 
     } else {
        

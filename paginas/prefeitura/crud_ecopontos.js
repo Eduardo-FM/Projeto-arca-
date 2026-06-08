@@ -28,12 +28,12 @@ function renderizarTabela() {
             <td>${eco.capacidade} ton</td>
             <td>
                 <span class="status-badge ${eco.status === 'ativo' ? 'status-ativo' : 'status-manutencao'}">
-                    ${eco.status === 'ativo' ? '● Ativo' : '⚙ Manutenção'}
+                    ${eco.status === 'ativo' ? 'Ativo' : 'Manutenção'}
                 </span>
             </td>
             <td>
                 <button class="btn-acao btn-editar"  onclick="editarEcoponto(${eco.id})">✏ Editar</button>
-                <button class="btn-acao btn-excluir" onclick="excluirEcoponto(${eco.id})">🗑 Excluir</button>
+                <button class="btn-acao btn-excluir" onclick="excluirEcoponto(${eco.id})"> Excluir</button>
             </td>
         `;
         corpoTabela.appendChild(linha);
