@@ -9,7 +9,6 @@
 <body>
     <div class="dashboard-container">
 
-        <!-- SIDEBAR: perfil Prefeitura usa cor azul -->
         <aside class="sidebar" style="background-color: var(--azul-acao);">
             <div class="sidebar-header">
                 <h2>♻️ Arca</h2>
@@ -17,9 +16,9 @@
             </div>
 
             <nav class="menu-nav">
-                <a href="prefeitura_apresentacao.html">📊 Dashboard Municipal</a>
-                <a href="prefeitura_ecopontos.html" class="active" style="background-color: rgba(126,184,255,0.20); color: #7EB8FF;">📍 Gerenciar Ecopontos</a>
-                <a href="prefeitura_relatorios.html">📋 Relatórios da Cidade</a>
+                <a href="prefeitura_apresentacao.html">Dashboard Municipal</a>
+                <a href="prefeitura_ecopontos.html" class="active" style="background-color: rgba(126,184,255,0.20); color: #7EB8FF;">Gerenciar Ecopontos</a>
+                <a href="prefeitura_relatorios.html">Relatórios da Cidade</a>
             </nav>
 
             <div class="sidebar-footer">
@@ -27,7 +26,6 @@
             </div>
         </aside>
 
-        <!-- CONTEÚDO PRINCIPAL -->
         <main class="main-content">
 
             <header class="main-header">
@@ -37,12 +35,10 @@
                 </div>
             </header>
 
-            <!-- Formulário CRUD -->
             <section class="content-section">
-                <h2 style="color: var(--azul-acao);">📝 Cadastrar / Editar Ecoponto</h2>
+                <h2 style="color: var(--azul-acao);">Cadastrar / Editar Ecoponto</h2>
 
                 <form id="formCrudEcoponto">
-                    <!-- Campo oculto que guarda o ID quando estamos editando -->
                     <input type="hidden" id="ecopontoId">
 
                     <div class="form-group">
@@ -63,23 +59,22 @@
                         <div class="form-group" style="flex: 1;">
                             <label for="status">Status Operacional</label>
                             <select id="status" required>
-                                <option value="ativo">✅ Ativo</option>
-                                <option value="manutencao">⚙️ Em Manutenção</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="manutencao">Em Manutenção</option>
                             </select>
                         </div>
                     </div>
 
                     <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
                         <button type="submit" class="btn-confirmar" style="background-color: var(--azul-acao);">
-                            💾 Salvar Ecoponto
+                            Salvar Ecoponto
                         </button>
                     </div>
                 </form>
             </section>
 
-            <!-- Tabela de listagem -->
             <section class="content-section">
-                <h2 style="color: var(--azul-acao);">📋 Ecopontos Cadastrados</h2>
+                <h2 style="color: var(--azul-acao);">Ecopontos Cadastrados</h2>
 
                 <div style="overflow-x: auto;">
                     <table class="tabela-estilizada" id="tabelaEcopontos">
@@ -93,7 +88,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Preenchido dinamicamente pelo crud_ecopontos.js -->
                         </tbody>
                     </table>
                 </div>
@@ -102,7 +96,6 @@
         </main>
     </div>
 
-    <!-- O script cuida de todo o CRUD da tabela -->
     <script src="crud_ecopontos.js"></script>
 </body>
 </html>
